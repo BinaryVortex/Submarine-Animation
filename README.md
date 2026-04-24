@@ -1,50 +1,64 @@
 # Submarine Animation
 
-A lightweight, eye-catching submarine animation built with plain HTML, CSS and JavaScript.
+A lightweight, eye-catching submarine animation built with plain HTML and CSS (with minimal JavaScript). This single-file demo presents a submarine cruising across the screen with a subtle bobbing motion and rising bubbles — perfect as a visual toy, a CSS learning example, or a decorative element for a web page.
 
 ![Submarine Animation Preview](./Screenshot%202024-08-25%20182620.png)
 
-Overview
+## Demo
 
-This repository contains a simple, single-page animation of a submarine traveling across the screen with subtle bobbing and bubble effects. It's designed as a visual demo and a small example of CSS animation combined with minimal JavaScript.
+Open `index.html` in any modern browser to see the animation. No build tools required.
 
-Files
+Quick ways to run the demo:
 
-- index.html — the demo page
-- style.css — all styles and keyframe animations
-- Screenshot 2024-08-25 182620.png — preview image used in this README
+- Double-click `index.html` in the repository folder.
+- Serve the folder locally (recommended):
 
-Quick start
+  npx http-server .
 
-1. Clone the repo:
+  Then visit the URL shown by the server (usually `http://localhost:8080`).
 
-   git clone https://github.com/BinaryVortex/Submarine-Animation.git
+## Features
 
-2. Open the demo in your browser:
+- Pure CSS keyframe animations for movement, bobbing, and bubbles.
+- Lightweight: one HTML file and one CSS file.
+- Easy to customize colors, speed, and the number of bubbles.
+- Works on modern desktop and mobile browsers.
 
-   - Double-click `index.html`, or
-   - Serve the folder with a static server (recommended):
+## How it works (short)
 
-     npx http-server .
+- index.html contains the markup for the submarine, bubbles, and sea/sky layers.
+- style.css defines CSS variables, the submarine styling, and multiple keyframe animations:
+  - horizontal travel across the viewport
+  - subtle vertical bobbing
+  - bubble rise and fade animations
 
-   Then open http://localhost:8080 (or the port shown by your server).
+The visual effect is achieved entirely with CSS transforms and animation timing functions; JavaScript is not required for the core animation.
 
-Features
+## Customization tips
 
-- Pure CSS keyframe animations for movement and bobbing
-- Simple JavaScript (if any) to control timing or interactivity
-- Lightweight and easy to customize — change colors, speed, or add elements
+- Change colors: edit the CSS variables or the `.submarine`/`.sea` rules in `style.css`.
+- Adjust speed: modify the `animation-duration` values in `style.css` (look for `submarine` and `bubble` animations).
+- Add more bubbles: copy the bubble markup in `index.html` and adjust their `animation-delay` values to stagger them.
+- Make the submarine larger/smaller by scaling the `.submarine` container and adjusting related sizing variables.
 
-Customization tips
+## Files
 
-- To change the submarine color, edit the CSS variables or the `.submarine` rule in `style.css`.
-- To adjust speed, modify the `animation-duration` values for the keyframes in `style.css`.
-- To add more bubbles or elements, copy the existing bubble markup in `index.html` and tweak their animation delays.
+- `index.html` — demo page and markup
+- `style.css` — styles and keyframe animations
+- `Screenshot 2024-08-25 182620.png` — preview image used in this README
 
-License
+## Development
 
-This project is released under the MIT License. Feel free to copy, modify, and use it in your own projects.
+This demo has no build step. Edit the files and refresh your browser to see changes. For a faster edit-refresh cycle, use a static server with live-reload (e.g., the Live Server extension in VS Code).
 
-Credits
+## License
 
-Built by BinaryVortex. Thanks for checking out the demo — contributions and improvements are welcome.
+This project is released under the MIT License. Feel free to copy, modify, and use it in your own projects. If you want me to add a LICENSE file, I can create one for you.
+
+## Credits
+
+Built by BinaryVortex. Thanks for checking out the demo — improvements and pull requests are welcome. If you'd like, I can also:
+
+- Add a hosted demo (GitHub Pages) and update the README with a live link.
+- Replace the screenshot with an animated GIF recording of the demo.
+
